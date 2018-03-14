@@ -1,0 +1,63 @@
+﻿<Window x:Class="WPFRental.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFRental"
+        mc:Ignorable="d"
+        Title="Fahrräder-Ausleih" Height="1080" Width="1920" WindowState="Maximized" ShowInTaskbar="true">
+
+    <Grid ShowGridLines="false" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3DE000"/>
+                    <GradientStop Color="#FFFAFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72"  FontWeight="Bold">Fahrrad-Verleih</Label>
+        </Grid>
+
+        <Grid Grid.Row="1" ShowGridLines="False">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCFD6CD" Offset="1"/>
+                    <GradientStop Color="#FFFAFFFF"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="bike" Grid.Column="1" Grid.Row="1" Background="White" Click="ClickEventButton">
+                <Image Source="bike.jpg" ></Image>
+            </Button>
+
+            <Button Name="cust" Grid.Column="3" Grid.Row="1" Background="#FFEAEAEA" Click="ClickEventButton">
+                <Image Source="customer.jpg"></Image>
+            </Button>
+
+            <Button Name="rent"  Grid.Column="5" Grid.Row="1" Background="#FFFFFFF5" Click="ClickEventButton">
+                <Image Source="rental.jpg"></Image>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
